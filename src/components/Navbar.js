@@ -75,7 +75,7 @@ const NavBtn = styled.div`
 const Navbar = () => {
   return (
     <Nav>
-      <Logo>LOGO</Logo>
+      <Logo>spaced</Logo>
       <Bars />
       <NavMenu>
         {menuData.map((item, index) => (
