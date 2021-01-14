@@ -75,15 +75,15 @@ const NavBtn = styled.div`
 const Navbar = () => {
   return (
     <Nav>
-      <Logo>spaced</Logo>
+      <Logo to="/">spaced</Logo>
       <Bars />
       <NavMenu>
         {menuData.map((item, index) => (
-          <NavMenuLink to={item.link}>{item.title}</NavMenuLink>
+          <NavMenuLink to={item.link} key={index}>{item.title}</NavMenuLink>
         ))}
       </NavMenu>
       <NavBtn>
-        <Button to="/contact" primary={true}>Contact Us</Button>
+        <Button to="/contact" primary="true">Contact Us</Button>
       </NavBtn>
     </Nav>
   )
