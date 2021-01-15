@@ -5,7 +5,7 @@ import { IoMdArrowRoundForward } from 'react-icons/io';
 import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
 
 const Hero = styled.section`
-  height: 100vh;
+  height: 98vh;
   max-height: 1100px;
   position: relative;
   overflow: hidden;
@@ -132,27 +132,33 @@ const HeroSection = ({slides}) => {
   const length = slides.length;
   const timeout = useRef(null);
 
-  useEffect(() => {
-    const nextSlide = () => {
-      setCurrentSlide(currentSlide => (currentSlide === length - 1 ? 0 : currentSlide + 1));
-    };
+  // useEffect(() => {
+  //   const nextSlide = () => {
+  //     setCurrentSlide(currentSlide => (currentSlide === length - 1 ? 0 : currentSlide + 1));
+  //   };
 
-    timeout.current = setTimeout(nextSlide, 3000);
+  //   timeout.current = setTimeout(nextSlide, 5000);
 
-    return function() {
-      if(timeout.currentSlide) {
-        clearTimeout(timeout.currentSlide);
-      }
-    }
-  }, [currentSlide, length])
+  //   return function() {
+  //     if(timeout.currentSlide) {
+  //       clearTimeout(timeout.currentSlide);
+  //     }
+  //   }
+  // }, [currentSlide, length]);
 
   const nextSlide = () => {
+    if(timeout.currentSlide) {
+      clearTimeout(timeout.currentSlide);
+    }
     setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1);
 
     // console.log(currentSlide);
   }
 
   const prevSlide = () => {
+    if(timeout.currentSlide) {
+      clearTimeout(timeout.currentSlide);
+    }
     setCurrentSlide(currentSlide === 0 ? length - 1 : currentSlide - 1);
     
     // console.log(currentSlide);

@@ -24,7 +24,7 @@ export const SlidesData = [
     title: 'Monkey Tree, Austin, TX',
     price: '$2,300 / month',
     path: '/spaces',
-    label: 'View Home',
+    label: 'View Space',
     image: imageThree,
     alt: 'House'
   },
@@ -32,7 +32,7 @@ export const SlidesData = [
     title: 'Modernity, Chicago, IL',
     price: '$2,800 / month',
     path: '/spaces',
-    label: 'View Home',
+    label: 'View Space',
     image: imageFour,
     alt: 'House'
   }
